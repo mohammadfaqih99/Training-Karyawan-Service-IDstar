@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "90a286dc-5beb-43e1-b47c-f8d2ec82c591",
+		"name": "Training Karyawan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30590050",
+		"_collection_link": "https://www.postman.com/jovi-cimb/workspace/project-freelance/collection/30590050-90a286dc-5beb-43e1-b47c-f8d2ec82c591?action=share&source=collection_link&creator=30590050"
+	},
+	"item": [
+		{
+			"name": "Karyawan",
+			"item": [
+				{
+					"name": "/karyawan/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nama\": \"Sri Fajar Hayuni\",\n  \"dob\": \"2003-07-03\",\n  \"status\": \"Menikah\",\n  \"alamat\": \"Bandung\",\n  \"detailKaryawan\": {\n    \"nik\": \"3215151204970003\",\n    \"npwp\": \"987654321\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/karyawan/save"
+					},
+					"response": []
+				},
+				{
+					"name": "/rekening/list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "page",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{host}}/v1/idstar/karyawan/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/karyawan/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/v1/idstar/karyawan/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/karyawan/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"nama\": \"Mohamad Faqih\",\n    \"dob\": \"2000-03-25\",\n    \"status\": \"Menikah\",\n    \"alamat\": \"Jakarta Barat\",\n    \"detailKaryawan\": {\n        \"nik\": \"321515240399003\",\n        \"npwp\": \"1213141516\"\n    }\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/karyawan/update"
+					},
+					"response": []
+				},
+				{
+					"name": "/karyawan/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/karyawan/delete"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Training",
+			"item": [
+				{
+					"name": "/training/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"pengajar\": \"Deni Juli Setiawan\",\n  \"tema\": \"Javascript\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/training/save"
+					},
+					"response": []
+				},
+				{
+					"name": "/training/list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "page",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{host}}/v1/idstar/training/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/training/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"pengajar\": \"Deni Juliana Setiawan\",\n    \"tema\": \"Javascript\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/training/update"
+					},
+					"response": []
+				},
+				{
+					"name": "/training/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/training/delete"
+					},
+					"response": []
+				},
+				{
+					"name": "/training/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/v1/idstar/training/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rekening",
+			"item": [
+				{
+					"name": "/rekening/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jenis\": \"BNI\",\n    \"nama\": \"Megawati\",\n    \"rekening\": \"987654321\",\n    \"karyawan\": 2 //need to insert karyawan first, this is for id karyawan\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/rekening/save"
+					},
+					"response": []
+				},
+				{
+					"name": "/rekening/list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "page",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{host}}/v1/idstar/karyawan/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/rekening/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/v1/idstar/rekening/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/rekening/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"jenis\": \"UOB\",\n    \"nama\": \"Ahmad Anies\",\n    \"rekening\": \"12121212\",\n    \"karyawan\": 1 //need to insert karyawan first, this is for id karyawan\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/rekening/update"
+					},
+					"response": []
+				},
+				{
+					"name": "/rekening/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/rekening/delete"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Karyawan Training",
+			"item": [
+				{
+					"name": "/karyawan-training/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"karyawan\": 1,\n  \"training\": 2,\n  \"tanggal\": \"2024-04-07 13:03:22\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/karyawan-training/save"
+					},
+					"response": []
+				},
+				{
+					"name": "/karyawan-training/list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "page",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{host}}/v1/idstar/karyawan-training/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/karyawan-training/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/v1/idstar/karyawan-training/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/karyawan-training/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"karyawan\": 2,\n    \"training\": 3,\n    \"tanggal\": \"2024-04-07 11:10:22\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/karyawan-training/update"
+					},
+					"response": []
+				},
+				{
+					"name": "/karyawan-training/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/v1/idstar/karyawan-training/delete"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:8088"
+		}
+	]
+}
